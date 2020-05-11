@@ -1,0 +1,17 @@
+# TeamSpeak 3 Server package made by DI4bI0
+# package maintained at http://www.diablos-netzwerk.de
+
+# installer.sh
+DOWNLOAD_ERROR="There was a problem downloading (${TS3SERVER_DOWNLOAD_FILE}) from the official download url (${TS3SERVER_DOWNLOAD_URL})."
+EXTRACT_ERROR="There was a problem extracting the (${TS3SERVER_DOWNLOAD_FILE})."
+UPGRADE_ERROR="You cant upgrade your ${NAME}, because the standard DIR: (${SYNOPKG_PKGDEST}/${TS3SERVER_BIN}) is missing."
+BACKUP_SUCCESSFULL="Your Backup is located under: (${SYNOPKG_PKGDEST%/${PACKAGE}}/.${PACKAGE}_backup)"
+UNINSTALL_SCCESSFULL="${NAME} successfull uninstalled."
+
+# start-stop-status.sh
+ALREADY_RUNNING="The ${NAME} is already running."
+SERVER_CRASHED="ts3server.pid found, but no ${NAME} running. Possibly your previously started ${NAME} crashed."
+COULD_NOT_START="${NAME} could not start."
+SERVER_STARTED="${NAME} started, for details please view the log file."
+HARD_SHUTDOWN="${NAME} could not shut down properly."
+SERVER_STOPED="${NAME} stoped."

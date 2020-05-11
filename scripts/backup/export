@@ -1,0 +1,27 @@
+. /usr/syno/bin/jsoncmd
+
+TS3DATA="${SYNOPKG_PKGDEST}/teamspeak3-server_linux"
+TS3DATA_BACKUP_DIRS="files logs"
+TS3DATA_BACKUP_FILES="ts3server.sqlitedb query_ip_whitelist.txt query_ip_blacklist.txt ts3server.ini ts3db_mysql.ini licensekey.dat"
+
+EXPPATH=$(jget "${SYNOPKG_BKP_INPUT}" ".temp_path")
+if [ $? -ne 0 ]; then
+	jerr "Failed to get export path"
+	exit 1
+fi
+
+if [ -d "${TS3DATA}" ]; then
+	for BACKUP_DIR in $TS3DATA_BACKUP_DIRS; do
+		cp -fr ${TS3DATA}/${BACKUP_DIR} ${EXPPATH}
+	done
+
+	for BACKUP_FILE in $TS3DATA_BACKUP_FILES; do
+		cp -f ${TS3DATA}/${BACKUP_FILE} ${EXPPATH}
+	done
+fi
+
+jout_begin
+joutstr "app_data_version" "1.0"
+jout_end
+
+exit 0

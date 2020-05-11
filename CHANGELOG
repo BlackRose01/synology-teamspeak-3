@@ -1,0 +1,275 @@
+Version:3.10.2-1
+
+1. Upgraded TeamSpeak to version 3.10.2
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.9.1-1
+
+1. Upgraded TeamSpeak to version 3.9.1
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.9.0-1
+
+1. Upgraded TeamSpeak to version 3.9.0
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.8.0-1
+
+1. Upgraded TeamSpeak to version 3.8.0
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.7.1-1
+
+1. Upgraded TeamSpeak to version 3.7.1
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.7.0-1
+
+1. Upgraded TeamSpeak to version 3.7.0
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.6.1-1
+
+1. Upgraded TeamSpeak to version 3.6.1
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.5.1-1
+
+1. Upgraded TeamSpeak to version 3.5.1
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.5.0-1
+
+1. Upgraded TeamSpeak to version 3.5.0
+2. Some other small changes
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.4.0-1
+
+1. Upgraded TeamSpeak to version 3.4.0
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.3.0-1
+
+1. Upgraded TeamSpeak to version 3.3.0
+2. Set x64 to default arch (x86 does not work for me under DSM 6.2)
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.2.0-3
+
+1. Added missing architectures (denverton)
+2. Switched to the new TeamSpeak3 Icon
+3. Extended the TS3Server Interface
+3.1 Added the ability to create ServerAdmin Tokens
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.2.0-2
+
+1. Upgraded TeamSpeak to version 3.2.0
+2. Added a TeamSpeak 3 licence dialog in install_uifile and upgrade_uifile, which you need to accept in order to install the TeamSpeak3 Server.
+3. Added a new dialog in install_uifile and upgrade_uifile, in which you can choose between 32bit (x86) and 64bit (amd64) TeamSpeak 3 Server files.
+4. Some other small changes.
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.0.13.8-2
+
+1. Added missing architectures
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.0.13.8-1
+
+1. Upgraded TeamSpeak to version 3.0.13.8
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.0.13.7-1
+
+1. Upgraded TeamSpeak to version 3.0.13.7
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.0.13.6-2
+
+1. Included the missing Perl CGI module for Perl greater or equal 5.24.0, to get the TeamSpeak Interface working, without a workaround.
+2. Extended the TS3Server Interface
+2.1. Added the ability to apply a NPL License to the Server
+3. Some other small changes
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.0.13.6-1
+
+1. Upgraded TeamSpeak to version 3.0.13.6
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.0.13.4-1
+
+1. Upgraded TeamSpeak to version 3.0.13.4
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.0.13.3-1
+
+1. Upgraded TeamSpeak to version 3.0.13.3
+
+-----------------------------------------------------------------------------------------------------
+
+Version:3.0.13.2-1
+
+1. Upgraded TeamSpeak to version 3.0.13.2
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.13-1
+
+1. Upgraded TeamSpeak to version 3.0.13
+IMPORTANT:
+query_ip_blacklist.txt
+query_ip_whitelist.txt
+Previous server versions never supported DNS names in white / blacklist.
+There just was no error about it and it was semi-ignored,
+which however caused other issues.
+As such there is now an error being thrown and the server is shutting down instead of allowing such malformed input,
+which could result in problems and security issues.
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.12.4-2
+
+1. Fixed a litte bug in the Interface (Backup selection list)
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.12.4-2
+
+1. Fixed a litte bug in the start-stop-status script
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.12.4-1
+
+1. Extended the TS3Server Interface and added DSM 6.0 support
+1.1 Added the ability, to set startparamter
+1.2 Added the ability, to make backups and save them in a user defined folder
+1.3 Added the ability, to restore from a previous backup
+2. Upgraded TeamSpeak to version 3.0.12.4
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.12.3-4
+
+1. Fixed a bug, that would prevent to show the right status of the ts3server after a DS reboot
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.12.3-3
+
+1. Fixed a bug, that would prevent the ts3server to start, if u upgrade from Version 3.0.12.3-1
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.12.3-2
+
+1. Added DSM 6.0 support
+3. Stopping the TeamSpeak3 Server works again
+2. Please note that the TeamSpeak3 Server Interface is still bugged and disabled for now!
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.12.3-1
+
+1. Upgraded TeamSpeak to version 3.0.12.3
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.12.2-1
+
+1. Upgraded TeamSpeak to version 3.0.12.2
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.12-1
+
+1. Upgraded TeamSpeak to version 3.0.12
+2. Changed the way how to backup server files
+2.1 Backup files are now predefined
+2.2 Backup dirs: 'files' 'logs'
+2.3 Backup files: 'ts3server.sqlitedb' 'query_ip_whitelist.txt' 'query_ip_blacklist.txt' 'ts3server.ini' 'ts3db_mysql.ini' 'licensekey.dat'
+3. Changes made to preinst, postinst, preuninst, postuninst, preupgrade and postupgrade in the install.sh
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.11.4-3
+
+1. Added braswell support.
+2. The Log Viewer in the Package Center shows now the lastest Server and Virtual-Server logfile.
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.11.4-2
+
+1. Added the possibility, to save all importent TS3 Server user files, through Synology Backup & Replication.
+2. The Log Viewer in the Package Center shows only the latest logfile now.
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.11.4-1
+
+1. Updated TeamSpeak 3 Server to version 3.0.11.4
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.11.3-5
+
+1. Rewritten password change process and some other small changes
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.11.3-4
+
+1. Added a tiny interface where you can set or change the password for the serveradmin (ServerQuery Admin)
+1.1 based on a request from http://url.diablos-netzwerk.de/ServerQueryAdmin
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.11.3-3
+
+1. Improved the wait time for the Admintoken to 30 seconds for slower CPUs
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.11.3-2
+
+1. Added a message in the notification-center, including the Admin Token
+1.1 based on the idea from http://url.diablos-netzwerk.de/ludditoken
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.11.3-1
+
+1. Updated the TeamSpeak3 Server to version 3.0.11.3
+2. Improved error reporting
+
+-----------------------------------------------------------------------------------------------------
+
+Version: 3.0.11.2-1
+
+1. Added some improvments to the start-stop-status script
+2. Added the ability to Backup all importent files, if you uninstall the Package
+3. Rewritten preinst, postinst, preuninst, postuninst, preupgrade and postupgrade
+4. Added new WIZARD_UIFILES"

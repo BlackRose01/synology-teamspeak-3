@@ -1,0 +1,11 @@
+[{
+	"step_title": "Remove the TeamSpeak 3 Server data",
+	"items": [{
+		"type": "multiselect",
+		"desc": "If you remove the TeamSpeak 3 Server, all settings/files and the Database will be deleted.",
+		"subitems": [{
+			"key": "pkgwizard_backup_data",
+			"desc": "Create a backup of the TeamSpeak 3 Server data."
+		}]
+	}]
+}]

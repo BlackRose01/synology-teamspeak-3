@@ -1,0 +1,18 @@
+. /usr/syno/bin/jsoncmd
+
+TS3DATA="${SYNOPKG_PKGDEST}/teamspeak3-server_linux"
+
+IMPPATH=$(jget "${SYNOPKG_BKP_INPUT}" ".temp_path")
+if [ $? -ne 0 ]; then
+	jerr "Failed to get import path"
+	exit 1
+fi
+
+if [ -d "${IMPPATH}" ]; then
+	cp -rf ${IMPPATH}/* ${TS3DATA}
+fi
+
+jout_begin
+joutstr "app_data_version" "1.0"
+jout_end
+exit 0
