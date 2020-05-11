@@ -11,11 +11,11 @@ NOW=$(date +%H-%M-%S)
 TODAY=$(date +%d-%m-%Y)
 
 # COMMON PACKAGE VARIABLES
+TS3SERVER_BASE_URL="http://files.teamspeak-services.com/releases/server"
 TS3SERVER_BIN="teamspeak3-server_linux"
-TS3SERVER_VER="3.10.2"
+TS3SERVER_VER=$(curl -s "${TS3SERVER_BASE_URL}" | grep -Poi "(?<=\")([0-9]|\.)+(?=\")" | uniq | sort --version-sort -r | head -n 1)
 TS3SERVER_ARCH=$([ "${pkgwizard_arch_amd64}" == "true" ] && echo "amd64" || echo "x86")
-TS3SERVER_DOWNLOAD_BASE_URL="http://files.teamspeak-services.com/releases/server"
-TS3SERVER_DOWNLOAD_URL="${TS3SERVER_DOWNLOAD_BASE_URL}/${TS3SERVER_VER}/${TS3SERVER_BIN}_${TS3SERVER_ARCH}-${TS3SERVER_VER}.tar.bz2"
+TS3SERVER_DOWNLOAD_URL="${TS3SERVER_BASE_URL}/${TS3SERVER_VER}/${TS3SERVER_BIN}_${TS3SERVER_ARCH}-${TS3SERVER_VER}.tar.bz2"
 TS3SERVER_DOWNLOAD_FILE="$(basename ${TS3SERVER_DOWNLOAD_URL})"
 TS3SERVER_HELPER_VAR=${TS3SERVER_DOWNLOAD_FILE%-$TS3SERVER_VER.tar.bz2}
 TS3SERVER_BACKUP_DIR="ts3server_backup_files"
