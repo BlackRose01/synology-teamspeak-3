@@ -1,0 +1,16 @@
+{
+	".url": {
+		"SYNO.SDS._ThirdParty.App.ts3server": {
+			"type": "legacy",
+			"allUsers": false,
+			"allowMultiInstance": false,
+			"title": "TS3Server Interface",
+			"desc": "TeamSpeak 3 Server Admin Interface",
+			"icon": "images/TS3_{0}.png",
+			"appWindow": "SYNO.SDS._ThirdParty.App.ts3server",
+			"height": 640,
+			"width": 440,
+			"url": "/webman/3rdparty/ts3server/index.cgi"
+		}
+	}
+}

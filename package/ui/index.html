@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TeamSpeak 3 Interface</title>
+		<style>
+			body{font:12px Arial,sans serif;color:#15428b;margin:0px 0px 0px 0px;padding-top: 5px;padding-bottom: 5px;}
+			legend{font-weight:bold;color:#15428b;}
+			fieldset{border:1px solid #bbb;padding-top:0px;padding-bottom:20px;width:400px;margin-left:auto;margin-right:auto;}
+			button {background-color: #fff;border: 1px solid #2A2E3A;color: #000;padding: 4px 16px;text-align: center;text-decoration: none;display: inline-block;font-size: 12px;margin: 4px 2px;-webkit-transition-duration: 0.4s; /* Safari */transition-duration: 0.4s;cursor: pointer;}
+			button:hover {background-color: #505666; color: #D3D3D3}
+			input {border: 1px solid #2A2E3A;background-color: #fff;color: #000;font-size: 12px;padding: 4px 4px;}
+			input:focus {border: 1px solid #15428b;background-color: #fff;color: #000;font-size: 12px;padding: 4px 4px;}
+			select {border: 1px solid #2A2E3A;background-color: #fff;color: #000;font-size: 12px;padding: 4px 4px;}
+		</style>
+	</head>
+	<body>
+		<fieldset><legend>TeamSpeak 3 Server Status: ==:TS3ServerStatus:==</legend>
+			<p><strong><u>TeamSpeak 3 Server Admin Password:</u></strong></p>
+			<p><strong>Please make sure,<br>that your password meets the following requirements:</strong><br />
+			<small>Has at least one lowercase<br />
+			Has at least one uppercase<br />
+			Has at least one digit<br />
+			Has at least 8 chars<br />
+			Has no spaces</small></p>
+			<form action="index.cgi" method="post">
+				<strong>Server Query Admin password:</strong><br />
+				<input type="password" name="ts3serverpassword" style="width: 260px" /><br /><br />
+				<button type="submit" name="change" value="changets3serverpassword">Change</button>==:ChangedTS3ServerPassword:==
+			</form>
+			<p><strong><u>TeamSpeak 3 Server Admin Token:</u></strong></p>
+			<p><small>Here you can generate a new ServerAdmin Token.<br />
+			With the generated Token you can gain Admin rights on your TS3Server.<br />
+			You just have to enter your Server Query Admin Passwort.</small></p>
+			<form action="index.cgi" method="post">
+				<strong>Server Query Admin password:</strong><br />
+				<input type="password" name="ts3serverpassword" style="width: 260px" /><br /><br />
+				==:TS3ServerToken:==
+				<button type="submit" name="change" value="generatets3servertoken">Generate</button>==:GenerateTS3ServerToken:==
+			</form>
+			<p><strong><u>TeamSpeak 3 Server Settings:</u></strong></p>
+			<form action="index.cgi" method="post">
+				<strong>Add your startparameter here (separated by space):</strong><br />
+				<small>e.g.: inifile=ts3server.ini</small><br />
+				<input type="text" name="startparameter" value="==:Startparameter:==" style="width: 260px"/><br /><br />
+				<strong>Add your Backup path here:</strong><br />
+				<small>e.g.: /volume1/ts3backup</small><br />
+				<small>to restore an uninstalled TS3 Server chose /volume1/@appstore/.ts3server_backup</small><br />
+				<input type="text" name="backuppath" value="==:Backuppath:==" style="width: 260px"/><br /><br />
+				<button type="submit" name="change" value="changesettings">Change</button>==:ChangedSettings:==
+			</form>
+			<p><strong><u>TeamSpeak 3 Server Backup/restore:</u></strong></p>
+			<form action="index.cgi" method="post">
+				<strong>Available Backups:</strong><br />
+				<small>chose which one you want to restore</small><br />
+				==:RestoreOptions:==
+				<button type="submit" name="backuprestore" value="2">Restore</button>
+				<button type="submit" name="backuprestore" value="1">Backup</button>==:BackupRestore:==
+			</form>
+			<p><strong><u>TeamSpeak 3 Server NPL License</u></strong></p>
+			<form action="index.cgi" method="post">
+				<strong>Status: ==:LicenseFile:==</strong><br /><br />
+				<strong>LicenseKey.dat Content: </strong><br />
+				<small>Convert the content from the licensekey.dat (base64)<br />and and apply it to the Server.<br />If you write delete and press submit, the licensekey.dat will be deleted!</small>
+				<input type="text" name="licensefilecontent" style="width: 260px" /><br /><br />
+				<button type="submit" name="change" value="licensefile">Submit</button>==:ChangedLicenseFile:==
+			</form>
+		</fieldset>
+	</body>
+</html>
