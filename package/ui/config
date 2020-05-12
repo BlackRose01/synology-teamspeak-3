@@ -4,7 +4,7 @@
 			"type": "legacy",
 			"allUsers": false,
 			"allowMultiInstance": false,
-			"title": "TS3Server Interface",
+			"title": "Teamspeak 3 Server Admin Interface",
 			"desc": "TeamSpeak 3 Server Admin Interface",
 			"icon": "images/TS3_{0}.png",
 			"appWindow": "SYNO.SDS._ThirdParty.App.ts3server",
